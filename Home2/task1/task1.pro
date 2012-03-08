@@ -16,7 +16,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    list.cpp \
     slist.cpp \
     dlist.cpp
 

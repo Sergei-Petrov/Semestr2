@@ -2,25 +2,19 @@
 #include "list.h"
 #include "iostream"
 
-sList::sList()
-{
-    count = 0;
-    head = NULL;
-}
-
-sList::~sList()
+SList::~SList()
 {
     while(head != NULL)
         {
-            List *tmp = head;
+            SList *tmp = head;
             head = head->next;
             delete tmp;
         }
 }
 
-void sList::add(int x)
+void SList::add(int x)
 {
-    sList *tmp = new sList;
+    SList *tmp = new SList;
     tmp->value = x;
     tmp->next = NULL;
     if(head == NULL)
@@ -32,27 +26,28 @@ void sList::add(int x)
     count++;
 }
 
-void sList::print()
+string SList::toString()
 {
-    sList *tmp = head;
+    string str;
+    SList *tmp = head;
     while(tmp != NULL)
     {
-        printf("%d ", tmp->value);
+        str.push_back(tmp->value + '0');
         tmp = tmp->next;
     }
-    printf("\n");
+    return str;
 }
 
-int sList::length()
+int SList::length()
 {
     return count;
 }
 
-int sList::delHead()
+int SList::delHead()
 {
     if(head == NULL)
     {
-        printf("List is empty");
+        cout << "List is empty";
         return 0;
     }
     if (head->next == NULL)
@@ -63,7 +58,7 @@ int sList::delHead()
         return x;
     }
     int x = head->value;
-    sList *tmp = head;
+    SList *tmp = head;
     head = tmp->next;
     delete tmp;
     head->

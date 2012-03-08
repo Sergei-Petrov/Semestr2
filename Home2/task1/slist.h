@@ -1,20 +1,22 @@
 #pragma once
 #include "list.h"
+#include "iostream"
 
-class sList : public List
+class SList : public List
 {
 public:
-    sList();
-    ~sList();
+    SList() : count(0), head(NULL)
+    {}
+    ~SList();
     void add(int x);
-    void print();
+    string toString();
     int length();
     int delHead();
 private:
     int count;
     int value;
-    sList *next;
-    sList *head;
-    sList *tail;
+    SList *next;
+    SList *head;
+    SList *tail;
 
 };

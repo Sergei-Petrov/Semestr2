@@ -1,21 +1,23 @@
 #pragma once
 #include "list.h"
+#include "iostream"
 
-class dList : public List
+class DList : public List
 {
 public:
-    dList();
-    ~dList();
+    DList() : count(0), head(NULL)
+    {}
+    ~DList();
     void add(int x);
-    void print();
+    string toString();
     void printEnd();
     int length();
     int delHead();
 private:
     int count;
     int value;
-    dList *next;
-    dList *head;
-    dList *tail;
-    dList *prev;
+    DList *next;
+    DList *head;
+    DList *tail;
+    DList *prev;
 };

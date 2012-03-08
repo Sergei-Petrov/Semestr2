@@ -1,14 +1,7 @@
 #include "dlist.h"
-#include "iostream"
-#include "list.h"
+#include "iostream" //iostream я использовал, потому что " 'NULL' unclared identifer "
 
-dList::dList()
-{
-    count = 0;
-    head = NULL;
-}
-
-dList::~dList()
+DList::~DList()
 {
     while(head != NULL)
         {
@@ -18,9 +11,9 @@ dList::~dList()
         }
 }
 
-void dList::add(int x)
+void DList::add(int x)
 {
-    dList *tmp = new dList;
+    DList *tmp = new DList;
     tmp->value = x;
     tmp->next = NULL;
     tmp->prev = NULL;
@@ -35,28 +28,29 @@ void dList::add(int x)
     count++;
 }
 
-void dList::print()
+string DList::toString()
 {
-    dList *tmp = tail;
+    string str;
+    DList *tmp = tail;
     while(tmp != NULL)
     {
-        printf("%d ", tmp->value);
+        str.push_back(tmp->value + '0');
         tmp = tmp->prev;
     }
-    printf("\n");
+    return str;
 }
 
-int dList::length()
+int DList::length()
 {
     return count;
 }
 
-int dList::delHead()
+int DList::delHead()
 {
     if(head == NULL)
     {
-        printf("List is empty");
-        return 0;
+        cout << "List is empty";
+        return INT_MAX;
     }
     if (head->next == NULL)
     {
@@ -66,7 +60,7 @@ int dList::delHead()
         return x;
     }
     int x = head->value;
-    dList *tmp = head;
+    DList *tmp = head;
     head = tmp->next;
     delete tmp;
     head->prev = NULL;
