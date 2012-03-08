@@ -1,5 +1,5 @@
 #include "dlist.h"
-#include "iostream" //iostream я использовал, потому что " 'NULL' unclared identifer "
+#include "iostream" //I used iostream, because " 'NULL' unclared identifer "
 
 DList::~DList()
 {
