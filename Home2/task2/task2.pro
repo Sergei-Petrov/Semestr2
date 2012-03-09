@@ -17,10 +17,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     pstack.cpp \
-    calculator.cpp
+    calculator.cpp \
+    mstack.cpp
 
 HEADERS += \
     stack.h \
     pstack.h \
     pstack.h \
-    calculator.h
+    calculator.h \
+    mstack.h

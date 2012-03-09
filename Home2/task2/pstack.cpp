@@ -1,5 +1,4 @@
 #include "pstack.h"
-#include "iostream"
 
 PStack::~PStack()
 {
@@ -27,7 +26,7 @@ char PStack::pop()
     PStack *tmp;
     char x;
     if(head == NULL)
-        return '/0';
+        return '\0';
     tmp = head;
     x = tmp->value;
     head = tmp->next;
