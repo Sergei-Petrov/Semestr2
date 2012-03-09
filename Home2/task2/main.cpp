@@ -1,14 +1,13 @@
-#include "mstack.h"
+#include "calculator.h"
 #include "iostream"
 
 int main()
 {
-    Stack *stack = new MStack;
-    stack->push('A');
-    stack->push('B');
-    cout << stack->toString() << endl;
-    cout << stack->pop() << endl;
-    cout << stack->toString();
-    delete(stack);
+    Calculator *obj = new Calculator;
+    string str;
+    cout << "Enter : ";
+    cin >> str;
+    cout << obj->calc(str);
+    delete(obj);
     return 0;
 }
