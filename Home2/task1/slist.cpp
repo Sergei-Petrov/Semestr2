@@ -46,10 +46,7 @@ int SList::length()
 int SList::delHead()
 {
     if(head == NULL)
-    {
-        cout << "List is empty";
-        return 0;
-    }
+        return INT_MAX;
     if (head->next == NULL)
     {
         int x = head->value;

@@ -1,5 +1,5 @@
 #include "dlist.h"
-#include "iostream" //I used iostream, because " 'NULL' unclared identifer "
+#include "iostream" //iostream я использовал, потому что " 'NULL' unclared identifer "
 
 DList::~DList()
 {
@@ -48,10 +48,7 @@ int DList::length()
 int DList::delHead()
 {
     if(head == NULL)
-    {
-        cout << "List is empty";
         return INT_MAX;
-    }
     if (head->next == NULL)
     {
         int x = head->value;
