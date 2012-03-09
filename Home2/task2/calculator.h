@@ -9,9 +9,5 @@ public:
     ~Calculator();
     int calc(string str);
 private:
-    void multiplication();
-    void division();
-    void addition();
-    void subtraction();
     Stack *stack;
 };
