@@ -1,6 +1,8 @@
 #pragma once
 #include "sorter.h"
 
+/// Bubblesort
+
 class BubbleSorter : public Sorter
 {
 public:
