@@ -10,16 +10,20 @@ QT       -= gui
 
 TARGET = task1
 CONFIG   += console
+CONFIG   += qtestlib
 CONFIG   -= app_bundle
 
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
+SOURCES += \
     slist.cpp \
-    dlist.cpp
+    dlist.cpp \
+    main.cpp
 
 HEADERS += \
     list.h \
     slist.h \
-    dlist.h
+    dlist.h \
+    sListTest.h \
+    dListTest.h

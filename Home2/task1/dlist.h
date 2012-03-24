@@ -13,6 +13,8 @@ public:
     void printEnd();
     int length();
     int delHead();
+    int valueHead();
+    int valueTail();
 private:
     int count;
     int value;

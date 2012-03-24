@@ -62,3 +62,13 @@ int SList::delHead()
     count--;
     return x;
 }
+
+int SList::valueHead()
+{
+    return head->value;
+}
+
+int SList::valueTail()
+{
+    return tail->value;
+}

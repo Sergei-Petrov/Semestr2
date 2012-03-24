@@ -64,3 +64,13 @@ int DList::delHead()
     count--;
     return x;
 }
+
+int DList::valueHead()
+{
+    return head->value;
+}
+
+int DList::valueTail()
+{
+    return tail->value;
+}

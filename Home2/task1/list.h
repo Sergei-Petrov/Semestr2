@@ -4,7 +4,7 @@
 using namespace std;
 
 class List
-{ 
+{
 public:
     virtual ~List()
     {}
@@ -12,4 +12,6 @@ public:
     virtual string toString() = 0;
     virtual int length() = 0;
     virtual int delHead() = 0;
+    virtual int valueHead() = 0;
+    virtual int valueTail() = 0;
 };
