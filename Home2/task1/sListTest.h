@@ -40,6 +40,14 @@ private slots:
         QVERIFY(l->valueHead() == 5 && l->valueTail() == 7);
     }
 
+    void testAddCounter()
+    {
+        l->add(5);
+        l->add(6);
+        l->add(7);
+        QVERIFY(l->length() == 3);
+    }
+
     void testToString()
     {
         l->add(2);
@@ -61,7 +69,15 @@ private slots:
         l->add(2);
         l->add(4);
         int x = l->delHead();
-        QVERIFY(l->valueHead() == 4 && x == 2);
+        QVERIFY(l->valueHead() == 4);
+    }
+
+    void testDelHeadReturnValue()
+    {
+        l->add(2);
+        l->add(4);
+        int x = l->delHead();
+        QVERIFY(x == 2);
     }
 
 private:
