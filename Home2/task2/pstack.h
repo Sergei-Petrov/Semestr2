@@ -4,12 +4,13 @@
 class PStack : public Stack
 {
 public:
-    PStack() : count(0), head(NULL)
+    PStack() : next (NULL), head(NULL), value(0), count(0)
     {}
     ~PStack();
     void push(char x);
     char pop();
     string toString();
+    int length();
 private:
     PStack *next;
     PStack *head;

@@ -1,6 +1,6 @@
 #pragma once
 #include "stack.h"
-#define stackLen 20
+int const stackLen = 20;
 
 class MStack : public Stack
 {
@@ -11,6 +11,7 @@ public:
     void push(char x);
     char pop();
     string toString();
+    int length();
 private:
     char stack[stackLen];
     int pointer;

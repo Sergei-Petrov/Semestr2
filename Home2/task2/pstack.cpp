@@ -31,6 +31,7 @@ char PStack::pop()
     x = tmp->value;
     head = tmp->next;
     delete(tmp);
+    count--;
     return x;
 }
 
@@ -44,5 +45,10 @@ string PStack::toString()
         tmp = tmp->next;
     }
     return str;
+}
+
+int PStack::length()
+{
+    return count;
 }
 

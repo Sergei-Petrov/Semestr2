@@ -11,4 +11,5 @@ public:
     virtual void push(char x) = 0;
     virtual char pop() = 0;
     virtual string toString() = 0;
+    virtual int length() = 0;
 };

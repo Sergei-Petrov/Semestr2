@@ -1,13 +1,16 @@
-#include "calculator.h"
-#include "iostream"
+#include "pStackTest.h"
+#include "mStackTest.h"
+#include "CalculatorTest.h"
 
 int main()
 {
-    Calculator *obj = new Calculator;
-    string str;
-    cout << "Enter : ";
-    cin >> str;
-    cout << obj->calc(str);
-    delete(obj);
+    PStackTest test;
+    QTest::qExec(&test);
+    printf("\n");
+    MStackTest test2;
+    QTest::qExec(&test2);
+    printf("\n");
+    CalculatorTest test3;
+    QTest::qExec(&test3);
     return 0;
 }

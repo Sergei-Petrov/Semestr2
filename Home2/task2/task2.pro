@@ -10,6 +10,7 @@ QT       -= gui
 
 TARGET = task2
 CONFIG   += console
+CONFIG   += qtestlib
 CONFIG   -= app_bundle
 
 TEMPLATE = app
@@ -25,4 +26,7 @@ HEADERS += \
     pstack.h \
     pstack.h \
     calculator.h \
-    mstack.h
+    mstack.h \
+    pStackTest.h \
+    mStackTest.h \
+    CalculatorTest.h

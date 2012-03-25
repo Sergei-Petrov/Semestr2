@@ -26,3 +26,8 @@ string MStack::toString()
         str.push_back(stack[i]);
     return str;
 }
+
+int MStack::length()
+{
+    return pointer + 1;
+}
