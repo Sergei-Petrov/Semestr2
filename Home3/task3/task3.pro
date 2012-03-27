@@ -10,15 +10,17 @@ QT       -= gui
 
 TARGET = task3
 CONFIG   += console
+CONFIG   += qtestlib
 CONFIG   -= app_bundle
 
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
+SOURCES += \
     sorter.cpp \
     quickSorter.cpp
 
 HEADERS += \
     sorter.h \
-    quickSorter.h
+    quickSorter.h \
+    quickSorterTest.h

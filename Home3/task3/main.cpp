@@ -1,3 +1,4 @@
+#include "quickSorterTest.h"
 #include "quickSorter.h"
 #include "iostream"
 
@@ -5,30 +6,33 @@ using namespace std;
 
 int main()
 {
-    Sorter *obj = new QuickSorter();
-    int n = 0;
-    int m = 0;
-    cout << "Enter n and m" << endl;
-    cin >> n >> m;
-    cout << "Enter matrix" << endl;
-    int **matrix = new int *[n];
-    for (int i = 0; i < n; i++)
-        matrix[i] = new int[m];
-    for (int i = 0; i < m; i++)
-        for (int j = 0; j < n; j++)
-            cin >> matrix[j][i];
+    //QuickSorterTest test;
+    //QTest::qExec(&test);
+    Sorter *obj = new QuickSorter;
+    int count = 9;
+    int sign = -1;
+    int count2 = 9;
+    int **a = new int *[5];
+    for (int i = 0; i < 5; i++)
+        a[i] = new int[2];
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 5; j++)
+        {
+            a[j][i] = count;
+            count = count + sign * count2--;
+            sign = sign * -1;
+        }
 
-    obj->sort(matrix, n);
+    obj->sort(a, 5);
 
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < 2; i++)
     {
-        for (int j = 0; j < n; j++)
-            cout << matrix[j][i] << " ";
-        cout << endl;
+        for (int j = 0; j < 5; j++)
+            cout << a[j][i] << "=" << b[j][i] << endl;
     }
-    for (int i = 0; i < n; i++)
-        delete [] matrix[i];
-    delete [] matrix;
+    for (int i = 0; i < 3; i++)
+        delete [] a[i];
+    delete [] a;
     delete obj;
     return 0;
 }
