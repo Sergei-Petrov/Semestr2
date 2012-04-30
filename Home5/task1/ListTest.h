@@ -30,7 +30,8 @@ private slots:
 
     void TestAdd()
     {
-        obj->add("123");
+        string str = "123";
+        obj->add(str);
         obj->add("1234");
         QVERIFY(!obj->isEmpty());
     }

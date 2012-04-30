@@ -1,5 +1,5 @@
 #include "ListTest.h"
-#include "HashFunctionTest.h"
+#include "HashFunctionsTest.h"
 #include "HashListTest.h"
 #include "iostream"
 
@@ -8,15 +8,19 @@ int main()
     ListTest test;
     QTest::qExec(&test);
     cout << endl;
-    HashFunctionTest test2;
+    HashFunctionsTest test2;
     QTest::qExec(&test2);
     cout << endl;
     HashListTest test3;
     QTest::qExec(&test3);
     cout << endl;
+
     int a = 0;
     string str;
     Hash *table = new HashList;
+    Function *func = new FirstHash;
+    Function *func2 = new SecondHash;
+    table->selectOfFunction(func);
     bool flag = true;
     while (flag)
     {
@@ -31,6 +35,9 @@ int main()
         switch (a)
         {
         case 0:
+            delete table;
+            delete func;
+            delete func2;
             flag = false;
             break;
         case 1:
@@ -57,10 +64,12 @@ int main()
         case 5:
             cout << "Enter number" << endl;
             cin >> a;
-            table->selectOfFunction(a);
+            if (a == 1)
+                table->selectOfFunction(func);
+            if (a == 2)
+                table->selectOfFunction(func2);
             break;
         }
     }
-    delete table;
     return 0;
 }

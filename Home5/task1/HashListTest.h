@@ -16,6 +16,9 @@ private slots:
     void init()
     {
         obj = new HashList();
+        f = new FirstHash;
+        f2 = new SecondHash;
+        obj->selectOfFunction(f);
     }
 
     void cleanup()
@@ -46,4 +49,6 @@ private slots:
 
 private:
     HashList *obj;
+    Function *f;
+    Function *f2;
 };

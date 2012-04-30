@@ -18,17 +18,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     HashList.cpp \
-    HashFunction.cpp \
-    List.cpp
+    List.cpp \
+    HashFunctions.cpp
 
 HEADERS += \
     Hash.h \
     HashList.h \
     Function.h \
-    HashFunction.h \
-    HashFunctionTest.h \
     StringListTest - копия.h \
     StringListTest - копия.h \
     HashListTest.h \
     List.h \
-    ListTest.h
+    ListTest.h \
+    HashFunctions.h \
+    HashFunctionsTest.h

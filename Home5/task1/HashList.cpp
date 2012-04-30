@@ -5,27 +5,26 @@ HashList::~HashList()
 {
     for (int i = 0; i < SIZE; i++)
         delete HashTable[i];
-    delete func;
 }
 
-void HashList::add(string str)
+void HashList::add(const string &str)
 {
-    HashTable[func->call(str,SIZE)]->add(str);
+    HashTable[func->hash(str,SIZE)]->add(str);
 }
 
-void HashList::remove(string str)
+void HashList::remove(const string &str)
 {
-    HashTable[func->call(str,SIZE)]->remove(str);
+    HashTable[func->hash(str,SIZE)]->remove(str);
 }
 
-bool HashList::search(string str)
+bool HashList::search(const string &str)
 {
-    return HashTable[func->call(str, SIZE)]->search(str);
+    return HashTable[func->hash(str, SIZE)]->search(str);
 }
 
-void HashList::selectOfFunction(int x)
+void HashList::selectOfFunction(Function *f)
 {
-    func->change(x);
+    func = f;
     reboot();
 }
 
@@ -70,7 +69,7 @@ void HashList::reboot()
             do
             {
                 for(int j = 0; j < HashTable[i]->curRepeats(); j++)
-                    tmp[func->call(HashTable[i]->curValue(), SIZE)]->add(HashTable[i]->curValue());
+                    tmp[func->hash(HashTable[i]->curValue(), SIZE)]->add(HashTable[i]->curValue());
             }
             while(HashTable[i]->further());
         }
