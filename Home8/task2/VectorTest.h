@@ -23,7 +23,7 @@ private slots:
     {
         Vector<int, 5> obj;
         string str = "<0, 0, 0, 0, 0>\n";
-        QCOMPARE(obj.print().str(), str);
+        QCOMPARE(obj.print(), str);
     }
 
     void TestConstructorArray()
@@ -31,7 +31,7 @@ private slots:
         int a[5] = {1, 2, 3, 4, 5};
         string str = "<1, 2, 3, 4, 5>\n";
         Vector<int, 5> obj(a, 5);
-        QCOMPARE(obj.print().str(), str);
+        QCOMPARE(obj.print(), str);
     }
 
     void TestCopyConstructor()
@@ -40,7 +40,7 @@ private slots:
         string str = "<1, 2, 3, 4, 5>\n";
         Vector<int, 5> obj(a, 5);
         Vector<int, 5> obj2(obj);
-        QCOMPARE(obj2.print().str(), str);
+        QCOMPARE(obj2.print(), str);
     }
 
     void TestAddition()
@@ -51,7 +51,7 @@ private slots:
         Vector<int, 5> obj3;
         obj3.addition(obj, obj2);
         string str = "<2, 4, 6, 8, 10>\n";
-        QCOMPARE(obj3.print().str(), str);
+        QCOMPARE(obj3.print(), str);
     }
 
     void TestSubtraction()
@@ -63,7 +63,7 @@ private slots:
         Vector<int, 5> obj3;
         obj3.subtraction(obj, obj2);
         string str = "<1, 2, 3, 4, 5>\n";
-        QCOMPARE(obj3.print().str(), str);
+        QCOMPARE(obj3.print(), str);
     }
 
     void TestScalar()

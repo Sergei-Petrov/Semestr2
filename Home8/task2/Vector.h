@@ -29,8 +29,8 @@ public:
       */
     Vector(const T *v, int length);
 
-    /// method that prints the vector to stream
-    stringstream print();
+    /// method that prints the vector to string
+    string print();
 
     /**
       * method that adds two vectors
@@ -88,7 +88,7 @@ Vector<T, SIZE>::Vector(const T *v, int length)
 }
 
 template <typename T, int SIZE>
-stringstream Vector<T, SIZE>::print()
+string Vector<T, SIZE>::print()
 {
     stringstream out;
     out << "<";
@@ -98,7 +98,7 @@ stringstream Vector<T, SIZE>::print()
         else
             out << vector[i] << ", ";
     out << ">" << endl;
-    return out;
+    return out.str();
 }
 
 template <typename T, int SIZE>
