@@ -1,5 +1,6 @@
 #pragma once
 #include <QtGui>
+#include "CheckWin.h"
 
 namespace Ui {
 class Widget;
@@ -15,15 +16,11 @@ public:
     QPushButton *buttons[9];
     QSignalMapper *Map;
     bool current;
-    short count;
-    short table[3][3];
+    CheckWin ch;
     
 private:
     Ui::Widget *ui;
-    void checkWin(int i);
-    bool horizont(int tmp);
-    bool vertical(int tmp);
-    bool diagonals();
+
     void end();
 
 public slots:
